@@ -60,3 +60,6 @@ virtualbox_headless_service:
 {% for label in deps %}
       - sysrc: {{ label }}
 {% endfor %}
+    - check_cmd:
+      # TODO: check for running VMs
+      - /usr/bin/true
